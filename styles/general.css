@@ -1,0 +1,212 @@
+/* *********** GENERAL ************************************* */
+
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+:root {
+    /* primary colors */
+    --blue500: #5457b6;
+    --blue200: #c3c4ef;
+    
+    --red500: #ed6468;
+    --red200: #ffb8bb;
+
+    --gray100: #eeeef6;
+    --gray200: #e0e0f0;
+    --gray300: #90959b;
+    --gray400: #4d535a;
+    --gray500: #333d4e;
+
+}
+
+body {
+    background-color: var(--gray100);
+    color: var(--gray400);
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    /* font-size: max(1rem, 0.444vw + 0.6rem); fluid typography for large screens */
+    --scalerem: calc((100vw - 375em/16) / (768/16 - 375/16));
+    --scalerpx: calc((100vw - 375px) / (768 - 375));
+    /* padding-bottom: 300px; */
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+p {
+    word-break: break-word;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    line-height: 150%;
+}
+
+.cntner0 {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: clamp(80%, 37.5rem, 100%);
+}
+
+
+main {
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex; 
+    flex-direction: column;
+    gap: 12px;
+}
+
+aside {
+    display: none;
+}
+
+@media only screen and (min-width: 62rem) {
+    .cntner0 {
+        width: min(100%, 66rem);
+        padding: 0 32px;
+    }
+    
+    aside {
+        width: 30%;
+        /* min-height: 100vh; */
+        display: block;
+        background-color: white;
+        border-radius: 8px;
+        height: 300px;
+        /* border: 0.1px dashed gray; */
+    }
+    
+    main {
+        width: 66%;
+    }
+
+
+}
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    font-size: 0.9rem;
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+textarea, input {
+    font-size: 1rem;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    resize: vertical;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+select {
+    font-size: 1em;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    color: var(--gray500);
+    /* border: 0.1px solid transparent; */
+    border: 1px solid var(--gray500);
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* svg {
+    width: 100%;
+}
+svg path {
+    width: 100%;
+} */
+
+svg {
+    height: 100%;
+}
+
+.developer-buttons {
+    display: none;
+    font-size: 0.8rem;
+    width: 300px;
+    position: fixed;
+    z-index: 1000000;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 16px;
+    top: 20px;
+    right: 20px;
+}
+
+.big-btn.light-btn.focus {
+    outline: 1px solid var(--blue500);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: var(--gray500);
+}
+
+h3 {
+    font-size: 1.4rem;
+    /* font-size: clamp(1.3rem, 1.3rem + var(--scalerem)*0.2, 1.5rem); */
+    font-weight: 500;
+    color: var(--gray500);
+}
+
+.filler {
+    min-height: 300px;
+    width: 100%;
+    /* vertical-align: bottom; */
+    /* border: 1px dashed gray; */
+}
+
+.time-time {
+    display: none;
+}
+.time-full {
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    background-color: var(--gray200);
+    border-radius: 4px;
+    padding: 4px;
+    max-width: none;
+    width: max-content;
+    z-index: 1;
+    display: none;
+}
+.time-full-full {
+    display: none;
+}
+
+.time:hover .time-full {
+    display: block;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 0.8rem;
+    line-height: 100%;
+}
+
+footer {
+    text-align: center;
+}

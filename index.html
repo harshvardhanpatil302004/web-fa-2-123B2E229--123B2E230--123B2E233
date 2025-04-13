@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/general.css">
+  <link rel="stylesheet" href="./styles/posts.css">
+  <link rel="stylesheet" href="./styles/floats.css">
+  <link rel="stylesheet" href="./styles/messages.css">
+  <link rel="stylesheet" href="./styles/modal.css">
+  
+  <title>Social media app</title>
+</head>
+
+<body>
+  <div class="headr-cntner">
+    <div class="cntner0">
+      <header>
+        <nav class="left-nav">
+          <a href="./" class="big-btn light-btn focus headr-btn" id="headr-btn-home">
+            <svg class="svg-house"></svg>
+          </a>
+
+          <div class="float-cntner">
+            <div class="srch-form">
+              <input placeholder="Search" id="headr-btn-search-f">
+              <button type="button" class="small-btn light-btn headr-btn" id="headr-btn-search-x">
+                <svg class="svg-x-mark"></svg>
+              </button>
+              <button type="button" class="big-btn light-btn headr-btn" id="headr-btn-search-u">
+                <svg class="svg-magnifying-glass"></svg>
+              </button>
+            </div>
+
+            <div class="float" id="search">
+              <ul class="srch-rslts">
+
+              </ul>
+              <ul id="srch-dscvr">
+                <h4>Discover people</h4>
+              </ul>
+            </div>
+          </div>
+
+        </nav>
+
+        <nav class="right-nav">
+          <div class="float-cntner">
+            <button type="button" class="big-btn light-btn headr-btn" id="headr-btn-messages-f">
+              <svg class="svg-chat-bubble"></svg>
+            </button>
+            <div class="float" id="messages">
+              <div class="msgs-headr left">
+                <button type="button" class="big-btn light-btn back">
+                  <svg class="svg-back"></svg>
+                </button>
+                <h3>Chat</h3>
+              </div>
+              <div class="msgs-headr right">
+                <div class="outside ctrls">
+                  <button type="button" class="big-btn light-btn" id="msgs-btn-targ-wndw-lis">
+                    <svg class="svg-list"></svg>
+                  </button>
+                </div>
+                <div class="tab">
+                  <button type="button" class="big-btn light-btn back">
+                    <svg class="svg-back"></svg>
+                  </button>
+                  <span class="tab-label"></span>
+                </div>
+                <div class="ctrls">
+                  <button type="button" class="big-btn light-btn" id="msgs-btn-targ-wndw-max">
+                    <svg class="svg-max-window"></svg>
+                  </button>
+                  <button type="button" class="big-btn light-btn" id="msgs-btn-targ-wndw-min">
+                    <svg class="svg-min-window"></svg>
+                  </button>
+                  <button type="button" class="big-btn light-btn" id="msgs-btn-targ-wndw-clo">
+                    <svg class="svg-x-mark"></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="msgs-side">
+                <div class="srch-form">
+                  <input placeholder="Search chat">
+                  <button type="button" class="small-btn light-btn close">
+                    <svg class="svg-x-mark"></svg>
+                  </button>
+                </div>
+                
+                <div class="msgs-side-main">
+                  
+                  <div id="msgs-inbox">
+                    <ul class="msgs-list chat main">                    
+                    </ul>
+                    
+                    <ul class="msgs-list chat srch-rslts"></ul>
+                  </div>
+                  
+                  <div id="msgs-cntcts">
+                    <ul class="msgs-list main cntcts">
+                    </ul>
+                    
+                    <ul class="msgs-list cntcts srch-rslts"></ul>
+                  </div>
+
+                  <ul id="msgs-sttngs">
+                    <ul class="msgs-list msgs-list-main">
+                      <p>This is the settings. Nothing here yet.</p>
+                    </ul>
+                  </ul>
+
+                  
+                  <ul class="msgs-list srch-rslts"></ul>
+                  <div class="filler">
+                  </div>
+                  <div class="filler">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="msgs-main" id="x1">
+                <div class="convos">
+                  <div class="post-box" id="new-convo">
+                    <div class="srch-form">
+                      <input placeholder="Search for recipient">
+                      <button type="button" class="small-btn light-btn close">
+                        <svg class="svg-x-mark"></svg>
+                      </button>
+                    </div>
+
+                    <div class="new-convo-srch">
+                      <ul class="msgs-list cntcts main"></ul>
+                      
+                      <ul class="msgs-list cntcts srch-rslts"></ul>
+                    </div>
+
+                    <!-- <div class="post form create msg">
+                      <textarea placeholder="Send a message" rows="2"></textarea>
+                      <button type="submit" class="big-btn" onclick="createPost(this)">SEND</button>
+                    </div> -->
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="msgs-footr left">
+                <div class="ctrls">
+                  <button type="button" class="big-btn light-btn" id="msgs-btn-targ-side-set">
+                    <svg class="svg-gear"></svg>
+                  </button>
+                  <button type="button" class="big-btn light-btn" id="msgs-btn-targ-side-con">
+                    <svg class="svg-address-book"></svg>
+                  </button>
+                  <button type="button" class="big-btn light-btn" id="msgs-btn-targ-main-new">
+                    <svg class="svg-add-message"></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-cntner">
+            <button type="button" class="big-btn light-btn headr-btn" id="headr-btn-notifs-f">
+              <svg class="svg-bell"></svg>
+            </button>
+            <div class="float" id="notifs">
+              <ul>
+                <li>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, suscipit! 
+                </li>
+                <li>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, suscipit! 
+                </li>
+                <li>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, suscipit!
+                </li>
+                <li>
+                  <a href="./notifs.html" class="more">
+                    See all notifications
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <a href="" class="avtr" id="current-user-avtr"></a>
+
+          <div class="float-cntner">
+            <button type="button" class="big-btn light-btn headr-btn" id="headr-btn-options-f">
+              <svg class="svg-burger-menu"></svg>
+            </button>
+            <div class="float" id="options">
+              <ul>
+                <li id="options-logout">
+                  Log out
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <div class="cntner0">
+    <main id="x0">
+    
+    </main>
+    <aside>
+
+    </aside>
+  </div>
+
+  <div class="filler">
+  </div>
+
+  <footer>
+    <p>
+      Project built by <a href="https://micoirvin.com">micoirvin</a>. See my code <a href="https://github.com/micoirvin/social-media-app">here</a>. Read my documentation <a href="https://micoirvin.com/projects-docu/social-media-app-docu.html">here</a>.
+    </p>
+  </footer>
+
+
+
+  <div class="developer-buttons">
+    <p>
+      If you have used a version of this app before August 28, 2022, some errors may occur, so you may need to Clear Local Storage. After you do so once, there is no need to Clear Local Storage again.
+    </p>
+    <button class="small-btn" onclick="refresh()">Refresh</button>
+    <button class="small-btn" onclick="clearLocalStorage()">Clear Local Storage</button>
+    <!-- Change user: -->
+    <!-- <select name="" id="chng-user" onclick="changeUser()">
+    </select> -->
+    <!-- <button class="small-btn" onclick="getScroll()">Get Scroll</button> -->
+  </div>
+
+  <div class="modal-bg" id="del-modal">
+    <div class="modal del">
+       <h3>Delete comment</h3>
+       <p>
+       Are you sure you want to delete this? This can't be undone.
+       </p>
+       <button type="button" class="big-btn no" onclick="toggleDelModal()">NO, CANCEL</button>
+       <button type="button" class="big-btn yes">YES, DELETE</button>
+    </div>
+  </div>
+
+  <script type="module" src="./scripts/user.js"></script>
+  <script type="module" src="./scripts/svgAssets.js"></script>
+  <script type="module" src="./scripts/elementsOperations.js"></script>
+  <script type="module" src="./scripts/initData.js"></script>
+  <script type="module" src="./scripts/getData.js"></script>
+  <script type="module" src="./scripts/dataOperations.js"></script>
+  <script type="module" src="./scripts/loginRedirect.js"></script>
+  <script type="module" src="./scripts/header.js"></script>
+  <script type="module" src="./scripts/posts.js"></script>
+  <script type="module" src="./scripts/messages.js"></script>
+  <script type="module" src="./scripts/main.js"></script>
+  <!-- <script type="module" src="./scripts/login.js"></script> -->
+  <script type="module" src="./scripts/options.js"></script>
+  <script type="module" src="./scripts/search.js"></script>
+  <script type="module" src="./scripts/time.js"></script>
+</body>
+</html>
